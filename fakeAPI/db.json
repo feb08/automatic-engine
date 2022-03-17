@@ -1,0 +1,70 @@
+{
+  "users": [
+    {
+      "name": "Febri",
+      "email": "febri@gmail.com",
+      "sector": "react native dev",
+      "id": 1
+    },
+    {
+      "name": "indah pratiwi",
+      "email": "indah@gmail.co",
+      "sector": "jurnalist",
+      "id": 2
+    },
+    {
+      "name": "peyek",
+      "email": "rempeyek@gmail.co.id",
+      "sector": "foodies",
+      "id": 4
+    },
+    {
+      "name": "cats",
+      "email": "cats@mail.id",
+      "sector": "cats",
+      "id": 7
+    },
+    {
+      "name": "localDB",
+      "email": "localDB@gmail.co",
+      "sector": "local base",
+      "id": 8
+    },
+    {
+      "name": "a",
+      "email": "a",
+      "sector": "a",
+      "id": 9
+    },
+    {
+      "name": "b",
+      "email": "b",
+      "sector": "b",
+      "id": 10
+    },
+    {
+      "name": "c",
+      "email": "c",
+      "sector": "c",
+      "id": 11
+    },
+    {
+      "name": "d",
+      "email": "d",
+      "sector": "d",
+      "id": 12
+    },
+    {
+      "name": "e",
+      "email": "e",
+      "sector": "e",
+      "id": 13
+    },
+    {
+      "name": "f",
+      "email": "f",
+      "sector": "f",
+      "id": 14
+    }
+  ]
+}
