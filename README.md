@@ -9,7 +9,7 @@
 - Upcoming Socket.io feature message
 
 **Mock up**
-- Splash screen thank you sir []()
+- Splash screen thank you sir [Splash screen](https://lottiefiles.com/353-newspaper-spinner)
 - Login screen inspiration [Alami](https://alamisharia.co.id/id/)
 - Main thank you sir [Mock up Page](https://www.figma.com/community/file/975336242667665188)
 - Message []()
@@ -19,6 +19,10 @@
 - login auth - register auth
 - home tabbar, drawer
 - refresh page
+- Upcoming search
 - Upcoming message
 - Upcoming notification
+- Upcoming Refer a friend
+- Upcoming Profile
+- Upcoming Favorite page
 - Upcoming signout
