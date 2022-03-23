@@ -25,4 +25,13 @@
 - Upcoming Refer a friend
 - Upcoming Profile
 - Upcoming Favorite page
-- Upcoming signout
+- signout
+
+**Result**
+- SplashScreen
+![splash](https://user-images.githubusercontent.com/53394539/159744032-91f1a489-3ad3-4e5f-8822-c66e133a790b.PNG)
+- LoginScreen
+![login](https://user-images.githubusercontent.com/53394539/159744172-56c1723b-7933-43f0-8e5a-7c2a76b502af.PNG)
+- DrawerScreen
+![drawer](https://user-images.githubusercontent.com/53394539/159744243-39a7a056-bc0a-43ae-a496-f0b90f62b091.PNG)
+- HomeScreen
