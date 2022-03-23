@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "8907214824",
+    "project_id": "reactnative-auth-74f60",
+    "storage_bucket": "reactnative-auth-74f60.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8907214824:android:81464c4cff5139fb3f1e5d",
+        "android_client_info": {
+          "package_name": "com.localdbapps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8907214824-10reqd6ck50iekho749ta2q4dkuuf2kf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsE7XpL0ShoxL-yn7X6TV4W1BV7pcZwoA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8907214824-10reqd6ck50iekho749ta2q4dkuuf2kf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

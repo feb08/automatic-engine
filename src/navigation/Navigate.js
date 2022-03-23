@@ -15,6 +15,8 @@
  import NotesScreen from '../screen/NotesScreens';
  import SettingsScreen from '../screen/SettingsScreen';
  import SplashScreen from '../screen/SplashScreen';
+ import Login from '../screen/BSwipeLogin';
+ import Notification from '../screen/NotificationScreen';
 
  const Stack = createNativeStackNavigator();
  const Tab = createBottomTabNavigator();
@@ -23,11 +25,12 @@
  function Navigate() {
    return (
      <NavigationContainer>
-       <Stack.Navigator>
+       <Stack.Navigator initialRouteName='SplashScreen'>
          <Stack.Screen name='SplashScreen' component={SplashScreen} options={{ headerShown: false }}/>
+         <Stack.Screen name='Login' component={Login} options={{ headerShown: false }}/>
          <Stack.Screen 
-         name="Home" 
-         component={MyTabs} 
+         name="HomeStack" 
+         component={MyTabs}
          options={{ 
            headerShown: false
          }}/>
@@ -46,6 +49,9 @@
          options={{
            title: ''
          }}/>
+         <Stack.Screen
+         name='Notification'
+         component={Notification}/>
        </Stack.Navigator>
      </NavigationContainer>
    );
@@ -59,7 +65,7 @@
       tabBarActiveTintColor: '#FF3A44',
     }}>
       <Tab.Screen 
-      name="Home" 
+      name="HomeDrawer" 
       component={MyDrawer} 
       options={{ 
         headerShown: false,
@@ -106,7 +112,7 @@ export function MyDrawer() {
         },
         }}>
       <Drawer.Screen 
-      name="Home" 
+      name="Homie" 
       component={HomeScreen}
       options={{
         // title: 'Home News',

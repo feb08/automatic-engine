@@ -4,9 +4,14 @@ import { DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawe
 import Axios from 'axios';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import auth from '@react-native-firebase/auth'
+import 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
 
 const DrawerCustom = (props) => {
     const [data, setData] = useState();
+    const navigation = useNavigation();
+
     const getImageData = () => {
         Axios.get('https://api.pexels.com/v1/curated', {
             headers: {
@@ -22,6 +27,15 @@ const DrawerCustom = (props) => {
         })
     }
 
+    handleSignOut = () => {
+        auth()
+        .signOut()
+        .then(() => {
+            navigation.replace('Login')
+        })
+        .catch(error => alert(error.message))
+    }
+
     useEffect(() => {
         getImageData();
     }, []);
@@ -30,12 +44,13 @@ const DrawerCustom = (props) => {
         <>
         { data && data.map((img, i)=> {
             return(
-            <View style={{ flex: 1 }}>
+            <View 
+            style={{ flex: 1 }}
+            key={img.id} >
                 <DrawerContentScrollView 
                 { ...props }
                 contentContainerStyle={{ backgroundColor: '#FF3A44' }}>
                     <ImageBackground
-                    key={img.id}
                     source={{ uri: img.src.tiny }}
                     style={{ padding: 20 }}>
                         <Image
@@ -45,13 +60,13 @@ const DrawerCustom = (props) => {
                             width: 80, 
                             borderRadius: 40, 
                             borderWidth: 3,
-                            borderColor: 'blue', 
+                            borderColor: 'red', 
                             marginBottom: 20 }}/>
                         <Text 
-                        style={{ color: '#FFF', fontSize: 18, marginBottom: 5 }}>Vladimir Putin</Text>
+                        style={{ color: '#FFF', fontSize: 18, marginBottom: 5 }}>{auth().currentUser?.email}</Text>
                         <View style={{ flexDirection: 'row' }}>
                             <Text
-                            style={{ color: '#FFF', fontSize: 18, marginRight: 5 }}>250 Points</Text>
+                            style={{ color: '#FFF', fontSize: 18, marginRight: 5 }}>{img.photographer_id} Points</Text>
                             <Icon name='loyalty' size={14} color='#FFF'/>
                         </View>
                     </ImageBackground>
@@ -66,7 +81,9 @@ const DrawerCustom = (props) => {
                             <Text style={{ fontSize: 15, marginLeft: 5 }}>Tell a Friend</Text>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={{ paddingVertical: 5 }}>
+                    <TouchableOpacity 
+                    style={{ paddingVertical: 5 }}
+                    onPress={handleSignOut}>
                         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                             <Icon name='logout' size={22}/>
                             <Text style={{ fontSize: 15, marginLeft: 5 }}>Sign Out</Text>
