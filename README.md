@@ -21,7 +21,7 @@
 - refresh page
 - Upcoming search
 - Upcoming message
-- Upcoming notification
+- notification
 - Upcoming Refer a friend
 - Upcoming Profile
 - Upcoming Favorite page
@@ -40,4 +40,7 @@
 ![seeall](https://user-images.githubusercontent.com/53394539/160273661-32af6d1a-061b-45ec-b9c3-058ef32c3a5a.PNG)
 - DetailScreen<br/>
 ![detail](https://user-images.githubusercontent.com/53394539/160273620-98cb17ef-043a-4e58-b89c-196648156928.PNG)
+- Push Notif Remote firebase<br/>
+![notif](https://user-images.githubusercontent.com/53394539/160279345-cc839827-4c44-4773-b557-85e8019322d7.PNG)
+
 
