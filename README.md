@@ -37,7 +37,7 @@
 - HomeScreen<br/>
 ![home](https://user-images.githubusercontent.com/53394539/160273569-63efb4b6-7ba1-46c1-ad27-fad68272f0a6.PNG)
 - SeeAllScreen<br/>
-![detail](https://user-images.githubusercontent.com/53394539/160273606-1a274a50-5ca0-498a-9a91-21f14f5cfccd.PNG)
+![seeall](https://user-images.githubusercontent.com/53394539/160273661-32af6d1a-061b-45ec-b9c3-058ef32c3a5a.PNG)
 - DetailScreen<br/>
 ![detail](https://user-images.githubusercontent.com/53394539/160273620-98cb17ef-043a-4e58-b89c-196648156928.PNG)
 
