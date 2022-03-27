@@ -5,7 +5,7 @@
 - Lottie RN V5
 - React Native Navigation V6
 - React Native Vector icons V9
-- Upcoming Firebase auth 
+- Login auth with Firebase 
 - Upcoming Socket.io feature message
 
 **Mock up**
@@ -35,3 +35,9 @@
 - DrawerScreen<br/>
 ![drawer](https://user-images.githubusercontent.com/53394539/159744243-39a7a056-bc0a-43ae-a496-f0b90f62b091.PNG)
 - HomeScreen<br/>
+![home](https://user-images.githubusercontent.com/53394539/160273569-63efb4b6-7ba1-46c1-ad27-fad68272f0a6.PNG)
+- SeeAllScreen<br/>
+![detail](https://user-images.githubusercontent.com/53394539/160273606-1a274a50-5ca0-498a-9a91-21f14f5cfccd.PNG)
+- DetailScreen<br/>
+![detail](https://user-images.githubusercontent.com/53394539/160273620-98cb17ef-043a-4e58-b89c-196648156928.PNG)
+
