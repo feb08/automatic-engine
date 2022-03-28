@@ -1,11 +1,12 @@
 import Axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { View, Text, ScrollView, TouchableOpacity, Image, StyleSheet } from 'react-native';
+import { View, Text, ScrollView, TouchableOpacity, Image, StyleSheet, RefreshControl } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const SeeAllScreen = () => {
     const navigation = useNavigation();
-    const [data, setData] = useState();
+    const [data, setData] = useState([]);
+    const [refreshing, setRefreshing] = useState(false);
 
     const getData = () => {
         Axios.get('https://newsapi.org/v2/top-headlines', {
@@ -19,6 +20,12 @@ const SeeAllScreen = () => {
             })
     }
 
+    const onRefresh = () => {
+        setRefreshing(true);
+        getData();
+        setRefreshing(false);
+    }
+
     useEffect(() => {
         getData();
     }, []);
@@ -26,13 +33,21 @@ const SeeAllScreen = () => {
         <View style={{ flex: 1, backgroundColor: '#fff' }}>
             <ScrollView
                 style={styles.scrollView}
-                showsVerticalScrollIndicator={false}>
+                showsVerticalScrollIndicator={false}
+                refreshControl={
+                    <RefreshControl
+                    refreshing={refreshing}
+                    onRefresh={onRefresh}
+                    colors={['#FF3A44']}/>
+                }>
                 {data && data.map((item, i) => {
                     return (
                         <TouchableOpacity
+                            key={item.id}
                             onPress={() => navigation.navigate('Detail', {
                                 data: item
-                            })}>
+                            })}
+                            >
                                 <View style={styles.viewItem}>
                                     <Image 
                                         style={styles.images}

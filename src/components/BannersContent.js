@@ -1,11 +1,12 @@
 import Axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { ScrollView, View, TouchableOpacity, ImageBackground, Text, StyleSheet } from 'react-native';
+import { ScrollView, View, TouchableOpacity, ImageBackground, Text, StyleSheet, ActivityIndicator } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const BannersContent = () => {
     const navigation = useNavigation();
     const [data, setData] = useState();
+    const [isLoading, setIsLoading] = useState(false);
 
     const getData = () => {
         Axios.get('https://newsapi.org/v2/top-headlines', {
@@ -16,6 +17,7 @@ const BannersContent = () => {
         })
             .then(res => {
                 setData(res.data.articles);
+                setIsLoading(true);
             })
     }
 
@@ -27,7 +29,7 @@ const BannersContent = () => {
             <ScrollView
                 horizontal={true}
                 showsHorizontalScrollIndicator={false}>
-                {data && data.slice(0, 3).map(item => {
+                {data && data.slice(0, 3).map((item, i) => {
                     return (
                         <TouchableOpacity
                             onPress={() => navigation.navigate('Detail', {
@@ -43,7 +45,8 @@ const BannersContent = () => {
                             >
                                 <View style={styles.viewFontWrapperBanner}>
                                     <Text style={styles.fontAuthorBanner}>{item.author}</Text>
-                                    <Text style={styles.fontTitleBanner}>{item.title}</Text>
+                                    <Text style={styles.fontTitleBanner}>
+                                    {isLoading ? item.title : <ActivityIndicator size="large" color="#ED555D"/>}</Text>
                                     <Text
                                         numberOfLines={1}
                                         style={styles.fontDescBanner}>{item.description}</Text>
@@ -85,13 +88,14 @@ const styles = StyleSheet.create({
     },
     fontAuthorBanner: {
         marginTop: 33,
+        fontSize: 14,
         fontWeight: '600',
         color: '#FFF'
     },
     fontTitleBanner: {
         marginBottom: 23,
         fontSize: 18,
-        fontWeight: 'bold',
+        fontWeight: '800',
         color: '#FFF'
     },
     fontDescBanner: {

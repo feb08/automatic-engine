@@ -30,7 +30,7 @@
          <Stack.Screen name='Login' component={Login} options={{ headerShown: false }}/>
          <Stack.Screen 
          name="HomeStack" 
-         component={MyTabs}
+         component={MyDrawer}//MyTabs if screen fav not add drawer
          options={{ 
            headerShown: false
          }}/>
@@ -66,7 +66,7 @@
     }}>
       <Tab.Screen 
       name="HomeDrawer" 
-      component={MyDrawer} 
+      component={HomeScreen} //MyDrawer if screen fav not add drawer
       options={{ 
         headerShown: false,
         tabBarLabel: 'Homie',
@@ -92,6 +92,21 @@
           backgroundColor: '#FFF', 
         }
       }} />
+      <Tab.Screen
+      name="Profile"
+      component={ProfileScreen}
+      options={{
+        tabBarLabel: 'Profile',
+        tabBarIcon: ({ color, size}) => (
+          <Icon name="person" color={color} size={size}/>
+        ),
+        title: 'Profile',
+        headerTitleAlign: 'center',
+        headerTintColor: '#ED555D',
+        headerStyle: {
+          backgroundColor: '#F0F0F0'
+        }
+      }}/>
     </Tab.Navigator>
   );
 }
@@ -113,7 +128,7 @@ export function MyDrawer() {
         }}>
       <Drawer.Screen 
       name="Homie" 
-      component={HomeScreen}
+      component={MyTabs} //HomeScreen if screen fav not add drawer
       options={{
         // title: 'Home News',
         // headerTitleAlign: 'center'
@@ -121,11 +136,6 @@ export function MyDrawer() {
           <Icon name='menu-book' color={color} size={22}/>
         )
       }} />
-      <Drawer.Screen name='Profile' component={ProfileScreen} options={{
-        drawerIcon: ({color}) => (
-          <Icon name='person' color={color} size={22}/>
-        )
-      }}/>
       <Drawer.Screen name='Notes' component={NotesScreen} options={{
         drawerIcon: ({color}) => (
           <Icon name='description' color={color} size={22}/>

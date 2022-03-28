@@ -7,7 +7,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 const BottomContent = () => {
     const navigation = useNavigation();
-    const [data, setData] = useState();
+    const [data, setData] = useState([]);
     const [fav, setFav] = useState([]);
 
     const getData = () => {
@@ -48,8 +48,6 @@ const BottomContent = () => {
        }
        return false;
     };
-
-
 
     return (
         <>
@@ -101,6 +99,7 @@ const styles = StyleSheet.create({
     images: {
         width: 370,
         height: 120,
+        alignSelf: 'stretch',
         borderRadius: 18,
         opacity: 0.9,
         shadowColor: "#000",

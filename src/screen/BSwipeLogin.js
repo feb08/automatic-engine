@@ -21,9 +21,9 @@ const BSwipeLogin = () => {
 
 const styles = StyleSheet.create({
     iconNews: {
-        marginTop: 50,
+        marginTop: 8,
         textAlign: 'center',
-        top: 83
+        //top: 3
     }
 })
 

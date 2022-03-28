@@ -10,11 +10,13 @@ const DetailScreen = ({ route, navigation }) => {
         <>
             {/* {console.log(route.params.data)} -> get data by route navigation*/}
             <View style={styles.viewDetail}>
+                    <View style={{ width: width, height: width, }}>
                     <Image
                         source={{ uri: route.params.data.urlToImage }}
-                        style={{ width: width, height: width }} 
-                        resizeMode='cover'
+                        style= {{alignSelf: 'stretch', resizeMode: 'cover', width: 'auto', flex: 1 }} 
+                        //resizeMode='cover'
                     />
+                    </View>
                     <View style={styles.viewWrapper}>
                         <View style={styles.viewBoxMid}>
                             <Text style={styles.fontDate}>{moment(dataType).format('LLLL')}</Text>

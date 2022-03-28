@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFF',
         borderRadius: 20,
         position: 'absolute',
-        top: SCREEN_HEIGHT
+        top: SCREEN_HEIGHT/1.2
     },
     lineBottomSheet: {
         height: 3,

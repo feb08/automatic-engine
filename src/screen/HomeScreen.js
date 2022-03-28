@@ -40,12 +40,6 @@ const HomeScreen = () => {
                         showsHorizontalScrollIndicator={false}>
                         <ButtonCustom
                             button="Wall Street" />
-                        <ButtonCustom
-                            button="Tesla" />
-                        <ButtonCustom
-                            button="Apple" />
-                        <ButtonCustom
-                            button="Wall Street" />
                     </ScrollView>
                 </View>
                 <BottomContent/>
